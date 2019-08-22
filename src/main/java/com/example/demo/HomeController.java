@@ -24,6 +24,11 @@ public class HomeController {
         return "list";
 
     }
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
+    }
+
 
     @GetMapping("/add")
     public String messageForm(Model model) {
@@ -41,4 +46,6 @@ public class HomeController {
           messageRepository.save(message);
           return "redirect:/";
     }
+
+
 }
