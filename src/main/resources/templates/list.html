@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Tweet</a><br/>
+<table>
+    <tr>
+        <th>Message</th>
+        <th>PostDate</th>
+        <th>SentBy</th>
+    </tr>
+    <tr th:each="message : ${messages}">
+    <td th:text="${message.content}"></td>
+    <td th:text="${message.postDate}"></td>
+    <td th:text="${message.sentBy}"></td>
+</tr>
+
+</table>
+
+
+
+
+
+</tr>
+</body>
+</html>
+
