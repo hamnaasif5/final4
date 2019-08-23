@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style type="text/css">
+    body {background: palevioletred !important;}
+</style>
 </head>
+
 <body>
-<a href="/add">Add a tweet</a><br/>
+
+
+<a href="/add"><b>Add a Tweet</b></a><br/>
 <div class="container">
     <div class ="jumbotron">
-        <table>
+        <table class="table">
         <tr>
-            <th>Message</th>
-            <th>PostDate</th>
-            <th>SentBy</th>
-            <th>Image</th>
+
+            <th scope column="col">Message</th>
+            <th scope column ="col">PostDate</th>
+            <th scope column="col">SentBy</th>
+            <th scope column="col">image</th>
         </tr>
 
 
@@ -27,7 +34,7 @@
             <td th:if="${message.image}">
 
                 <div th:if="${messages}  !=null">
-                    <img th:src="${message.image}" />
+                    <img th:src="${message.image}" style ="width: 400px;"/>
                 </div>
             </td>
             <td>
