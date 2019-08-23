@@ -16,15 +16,15 @@ public class Message {
     private long id;
 
     @NotNull
-    @Size(min=5, max=150)
+    @Size(min=2, max=150)
     private String content;
 
     @NotNull
-    @Size (min = 6)
+    @Size (min = 2)
     private String postDate;
 
     @NotNull
-    @Size (min=5)
+    @Size (min=2)
     private String sentBy;
 
     @NotNull

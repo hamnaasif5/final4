@@ -30,7 +30,15 @@
                     <img th:src="${message.image}" />
                 </div>
             </td>
+            <td>
+                <a th:href="@{/update/{id}(id=${message.id})}">Update</a> -
+                <a th:href="@{/detail/{id}(id=${message.id})}">Detail</a> -
+                <a th:href="@{/delete/{id}(id=${message.id})}">Delete</a>
+            </td>
+
+
         </tr>
+
 
         </table>
 
