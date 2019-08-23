@@ -8,6 +8,7 @@
 <body>
 <div class="container">
     <div class ="jumbotron">
+        <form method ="POST" action="/add" th:object="${message}" enctype="multipart/form-data">
 
         <form action ="#" th:action="@{/process}" th:object="${message}" method="post">
             Content: <input type="text" th:field="*{content}" />
@@ -22,7 +23,7 @@
             SentBy <input type="text" th:field="*{sentBy}" />
             <span th:if="${#fields.hasErrors('sentBy')}"
                   th:errors="*{sentBy}"></span><br />
-
+            <input type="file" name="file" /><br/><br/>
             <input type="submit" value ="Submit" />
 
         </form>
